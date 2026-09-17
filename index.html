@@ -1,30 +1,491 @@
+None selected 
+
+
+Skip to content
+Using Gmail with screen readers
+
+1 of 11,552
+Portfolio
+Inbox
+
+Dhanya Unnithiriparambil
+Attachments
+12:49 (49 minutes ago)
+ 
+
+Unnithiriparambil, Dhanya - Consultant 
+Attachments
+13:34 (3 minutes ago)
+to me
+
+
+From: Dhanya Unnithiriparambil <uvdhanya@gmail.com>
+Sent: Thursday, September 17, 2026 12:49 PM
+To: Unnithiriparambil, Dhanya - Consultant <dhanya.unni@sephora.com>
+Subject: [EXTERNAL] Portfolio
+ 
+
+ 2 attachment
+  •  Scanned by Gmail
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Dhanya</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dhanya — POS Engineer</title>
+
+<!--
+  ============================================================
+  HOW TO USE THIS TEMPLATE
+  ============================================================
+  Every place you need to personalize is marked with a comment
+  that starts with "UPDATE:" right above it.
+
+  Quick checklist of what to change:
+    1. TITLE tag above (in the head) — your name
+    2. Photo (in the header)         — replace initials circle with your photo
+    3. Header name/role              — your name, title, domain
+    4. Social links (in header)      — GitHub / LinkedIn / email
+    5. Summary tab                   — your bio
+    6. Projects tab                  — swap in your real projects
+    7. Skills tab                    — swap in your real skills
+    8. Footer                        — year / name
+
+  To use your own photo instead of the initials circle:
+    Replace the avatar DIV (class="avatar") with an IMG tag:
+      src="your-photo.jpg", class="avatar-img"
+    and place your-photo.jpg in the same folder as this file
+    (there's a ready-made .avatar-img style below, just uncomment it).
+
+  The tabs work with plain HTML/CSS/JS — no build step, no
+  dependencies besides Google Fonts. Everything lives in this
+  one file so you can drop it straight into a repo as index.html.
+  ============================================================
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  /* ============================================================
+     COLOR TOKENS — change the site's whole palette from here
+     ============================================================ */
+  :root {
+    --bg: #F7F6F2;          /* page background */
+    --ink: #1B1E1F;         /* primary text */
+    --ink-soft: #5B6260;    /* secondary / muted text */
+    --accent: #2F4B3C;      /* the one accent color — links, rules, active tab */
+    --line: #DEDAD1;        /* hairline border color */
+    --tag-bg: #EFEDE6;      /* skill tag background */
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'IBM Plex Sans', sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ---------- Header ---------- */
+  header.hero {
+    padding: 64px 0 32px;
+  }
+  .hero-top {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 20px;
+  }
+  .avatar {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Source Serif 4', serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    flex-shrink: 0;
+  }
+  /* Uncomment if you switch to a real photo:*/
+  .avatar-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+  
+  .hero-name {
+    font-family: 'Source Serif 4', serif;
+    font-size: 2.1rem;
+    font-weight: 600;
+    margin: 0 0 4px;
+  }
+  .hero-role {
+    color: var(--ink-soft);
+    font-size: 1.05rem;
+    margin: 0;
+  }
+  .hero-links {
+    display: flex;
+    gap: 20px;
+    font-size: 0.95rem;
+  }
+
+  /* ---------- Tabs ---------- */
+  .tabs {
+    display: flex;
+    gap: 4px;
+    border-bottom: 1px solid var(--line);
+    position: sticky;
+    top: 0;
+    background: rgba(247, 246, 242, 0.92);
+    backdrop-filter: blur(6px);
+    z-index: 10;
+  }
+  .tab-btn {
+    appearance: none;
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    padding: 14px 4px;
+    margin-right: 28px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.98rem;
+    font-weight: 500;
+    color: var(--ink-soft);
+    cursor: pointer;
+    transition: color 0.15s ease, border-color 0.15s ease;
+  }
+  .tab-btn:hover { color: var(--ink); }
+  .tab-btn[aria-selected="true"] {
+    color: var(--ink);
+    border-bottom-color: var(--accent);
+  }
+
+  .tab-panel { padding: 40px 0 64px; }
+  .tab-panel[hidden] { display: none; }
+
+  /* ---------- Summary tab ---------- */
+  .hero-summary {
+    max-width: 62ch;
+    font-size: 1.02rem;
+  }
+  .summary-heading {
+    font-family: 'Source Serif 4', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0 0 18px;
+  }
+  .now-row {
+    margin-top: 32px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+  }
+  .now-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--ink-soft);
+    margin: 0 0 6px;
+  }
+
+  /* ---------- Projects tab ---------- */
+  .panel-heading {
+    font-family: 'Source Serif 4', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0 0 24px;
+  }
+  .project {
+    padding: 24px 0;
+    border-top: 1px solid var(--line);
+  }
+  .project:first-of-type { border-top: none; padding-top: 0; }
+  .project-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .project-title {
+    font-family: 'Source Serif 4', serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin: 0;
+  }
+  .project-link { font-size: 0.9rem; white-space: nowrap; }
+  .project-desc {
+    color: var(--ink-soft);
+    margin: 8px 0 12px;
+    max-width: 62ch;
+  }
+  .project-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+  .tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.78rem;
+    background: var(--tag-bg);
+    color: var(--ink-soft);
+    padding: 3px 9px;
+    border-radius: 3px;
+  }
+
+  /* ---------- Skills tab ---------- */
+  .skill-row {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 16px;
+    padding: 14px 0;
+    border-top: 1px solid var(--line);
+    align-items: baseline;
+  }
+  .skill-row:first-of-type { border-top: none; }
+  .skill-label { color: var(--ink-soft); font-size: 0.92rem; }
+  .skill-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+
+  /* ---------- Footer ---------- */
+  footer {
+    padding: 32px 0 56px;
+    color: var(--ink-soft);
+    font-size: 0.85rem;
+    border-top: 1px solid var(--line);
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 560px) {
+    .hero-top { flex-direction: column; align-items: flex-start; }
+    .hero-name { font-size: 1.7rem; }
+    .tab-btn { margin-right: 18px; font-size: 0.92rem; }
+    .skill-row { grid-template-columns: 1fr; gap: 6px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+  }
+</style>
 </head>
 <body>
 
-<h1>Dhanya</h1>
-<p>Experienced IT professional with 18 years in the industry</p>
-<p>15 years of specialization in the Retail sector </p>
-<p>Proven success in eCommerce and Point of Sale (POS) systems</p>
-<p>Implemented frameworks for global Retail leaders such as Walmart,
-IKEA, Sephora, and Petco </p>
-<p>Expert in payment integration for retail stores </p>
-<p>Developed and maintained large-scale eCommerce platforms using
-ATG and IBM WebSphere Commerce, supporting millions of users
-globally </p>
-<p>Achieved 95%+ on-time delivery rate for enterprise-grade software
-releases </p>
-<p>Follows Agile and Scrum methodologies for efficient, process-oriented
-development </p>
-<p>Proficient in Object-Oriented Analysis and Design (OOAD) </p>
-<p>Strong understanding of design patterns and UML diagrams </p>
-<p>Excellent interpersonal and communication skills </p>
-<p>Capable of translating business requirements into effective technical
-solutions </p>
-<p>Goal-oriented team player with strong organizational skills and a
-commitment to results </p>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="hero-top">
+      <!-- UPDATE: point src to your photo file (kept in this same folder) -->
+      <img class="avatar-img" src="Id card_Dhanya.jpg" alt="Dhanya Unnithiriparambil" />
+      <div>
+        <!-- UPDATE: your name -->
+        <h1 class="hero-name">Dhanya Unnithiriparambil</h1>
+        <!-- UPDATE: role + years of experience + domain -->
+        <p class="hero-role">POS Engineer · 18 years in Retail</p>
+      </div>
+    </div>
+    <div class="hero-links">
+      <!-- UPDATE: your real links -->
+      <a href="https://www.linkedin.com/in/dhanyaunnithiriparambil/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:uvdhanya@gmail.com">Email</a>
+    </div>
+  </header>
+
+  <div class="tabs" role="tablist" aria-label="Portfolio sections">
+    <button class="tab-btn" id="tab-summary" role="tab" aria-selected="true" aria-controls="panel-summary">Summary</button>
+    <button class="tab-btn" id="tab-projects" role="tab" aria-selected="false" aria-controls="panel-projects" tabindex="-1">Projects</button>
+    <button class="tab-btn" id="tab-skills" role="tab" aria-selected="false" aria-controls="panel-skills" tabindex="-1">Skills</button>
+  </div>
+
+  <!-- ============ SUMMARY ============ -->
+  <section class="tab-panel" id="panel-summary" role="tabpanel" aria-labelledby="tab-summary" tabindex="0">
+    <h2 class="summary-heading">Summary</h2>
+    <!-- UPDATE: 2–3 sentence summary about you, your focus area, and what you're currently working on or looking for -->
+    <p class="hero-summary">
+      Lead Software Engineer with 18+ years of experience delivering enterprise software solutions across retail commerce, payments,POS, eCommerce, and backend platforms. Strong expertise in Java, Spring Boot, REST APIs, Oracle Xstore POS, payment integrations,IBM WebSphere Commerce, and enterprise system integration. Experienced in leading end-to-end solution delivery, technical design,production support, modernization initiatives, and cross-functional engineering efforts. Deep understanding of payment flows including authorization, tokenization, settlement, reconciliation, tender validation, payment device integration, and PCI-compliant payment solutions.
+
+	Delivered solutions for Sephora, Walmart, IKEA, and Petco, including payment modernization, omnichannel fulfillment, eCommerce, and enterprise integrations. Experienced in leveraging GitHub Copilot and Claude for AI-assisted development, root cause analysis, impact assessment, technical documentation, and knowledge sharing.
+    </p>
+
+    <div class="now-row">
+      <p class="now-label">Currently</p>
+      <!-- UPDATE: what you're doing right now / open to -->
+      <p class="hero-summary">
+        Contributing to Sephora's Next Day Delivery initiative on the Oracle Xstore point-of-sale platform, building and maintaining the in-store
+		label-printing pipeline that lets store associates fulfill same/next-day online orders. Work spans the full stack of a ZPL label workflow —
+		Operation-chain business logic, data-model design, and hardware label-template configuration.
+		</br>
+		 Actively seeking full-time Lead Backend Engineer roles (Java / enterprise retail systems) 
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section class="tab-panel" id="panel-projects" role="tabpanel" aria-labelledby="tab-projects" tabindex="0" hidden>
+    <h2 class="panel-heading">Projects</h2>
+
+    <!-- UPDATE: repeat this .project block for each project, or delete extras -->
+	<div class="project">
+      <div class="project-top">
+        <h3 class="project-title">POS SIM Integration</h3>
+        <a class="project-link" href="https://urldefense.com/v3/__https://github.com/yourusername/project-one__;!!Lt0KOR8!XkkGQcBdzzuONywmTA6T1-TwhnlN8pW66MU6mSZ0PVmzWqjnPeLtXbEgNjGkbpfLazwGjRz18vBrj9JpXnE$" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>
+      <p class="project-desc">
+        Design the integration Point-of-Sale system with the enterprise Store Inventory Management (SIM) platform, giving store associates and back-office teams a single, real-time view of stock.
+      </p>
+      <div class="project-tags">
+        <span class="tag">Java11</span>
+        <span class="tag">Oracle XStore</span>
+		<span class="tag">REST API</span>
+      </div>
+    </div>
+	
+    <div class="project">
+      <div class="project-top">
+        <h3 class="project-title">Nextday Delivery</h3>
+        <a class="project-link" href="https://urldefense.com/v3/__https://github.com/yourusername/project-one__;!!Lt0KOR8!XkkGQcBdzzuONywmTA6T1-TwhnlN8pW66MU6mSZ0PVmzWqjnPeLtXbEgNjGkbpfLazwGjRz18vBrj9JpXnE$" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>
+      <p class="project-desc">
+        Design and end-to-end delivery of Sephora's Next Day Delivery (NDD) fulfillment capabilities for Sephora's Oracle Xstore POS/mPOS(Java 11), enabling in-store picking, packing, and shipping. Integrated the Delivery Solutions API for order creation and Zebra ZPL network label printing for on-demand shipping labels
+      </p>
+      <div class="project-tags">
+        <span class="tag">Java11</span>
+        <span class="tag">Oracle XStore</span>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-top">
+        <h3 class="project-title">Dynamic Currency Conversion</h3>
+        <a class="project-link" href="https://urldefense.com/v3/__https://github.com/yourusername/project-two__;!!Lt0KOR8!XkkGQcBdzzuONywmTA6T1-TwhnlN8pW66MU6mSZ0PVmzWqjnPeLtXbEgNjGkbpfLazwGjRz18vBrrCYiXWk$" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>
+      <p class="project-desc">
+        Enabled foreign shoppers to pay in their local currency, improving conversion and international reach
+      </p>
+      <div class="project-tags">
+        <span class="tag">Java11</span>
+        <span class="tag">Oracle XStore</span>
+		<span class="tag">Vendor management</span>
+		<span class="tag">Support transition</span>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-top">
+        <h3 class="project-title">NextGen Pinpad</h3>
+        <a class="project-link" href="https://urldefense.com/v3/__https://github.com/yourusername/project-three__;!!Lt0KOR8!XkkGQcBdzzuONywmTA6T1-TwhnlN8pW66MU6mSZ0PVmzWqjnPeLtXbEgNjGkbpfLazwGjRz18vBrc-xChKk$" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>
+      <p class="project-desc">
+        Worked with multiple vendors, including Verifone, FreedomPay, Adyen and Ingenico, to lead/design and develop the payment device upgrade project for Sephora. 
+      </p>
+      <div class="project-tags">
+        <span class="tag">Payment systems</span>
+        <span class="tag">Oracle XStore</span>
+		<span class="tag">Vendor management</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section class="tab-panel" id="panel-skills" role="tabpanel" aria-labelledby="tab-skills" tabindex="0" hidden>
+    <h2 class="panel-heading">Skills</h2>
+
+    <!-- UPDATE: edit the tags in each row to match your actual stack -->
+	 <div class="skill-row">
+      <span class="skill-label">Domain</span>
+      <div class="skill-tags">
+        <span class="tag">Retail</span>
+        <span class="tag">Payment integration</span>
+        <span class="tag">eCommerce</span>
+      </div>
+    </div>
+    <div class="skill-row">
+      <span class="skill-label">Languages</span>
+      <div class="skill-tags">
+        <span class="tag">Java</span>
+        <span class="tag">SQL</span>
+        <span class="tag">Splunk query</span>
+      </div>
+    </div>
+    <div class="skill-row">
+      <span class="skill-label">Frameworks</span>
+      <div class="skill-tags">
+        <span class="tag">Oracle XStore</span>
+        <span class="tag">Websphere commerce</span>
+		<span class="tag">Spring</span>
+        <span class="tag">Springboot</span>
+      </div>
+    </div>
+    <div class="skill-row">
+      <span class="skill-label">Infra & Tools</span>
+      <div class="skill-tags">
+        <span class="tag">Apache Ant + Oracle InstallX packaging</span>
+        <span class="tag">Jenkins (build & deployment pipelines)</span>
+        <span class="tag">Git / GitHub (feature-branch workflow, PR reviews)</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <!-- UPDATE: year and name -->
+    &copy; 2026 DU. Built with HTML, CSS &amp; JS.
+  </footer>
+
+</div>
+
+<script>
+  // Simple accessible tab switching — no dependencies.
+  (function () {
+    const tabs = Array.from(document.querySelectorAll('.tab-btn'));
+    const panels = Array.from(document.querySelectorAll('.tab-panel'));
+
+    function activate(tab) {
+      tabs.forEach(t => {
+        const selected = t === tab;
+        t.setAttribute('aria-selected', selected);
+        t.tabIndex = selected ? 0 : -1;
+      });
+      panels.forEach(p => {
+        p.hidden = p.id !== tab.getAttribute('aria-controls');
+      });
+      tab.focus();
+    }
+
+    tabs.forEach((tab, i) => {
+      tab.addEventListener('click', () => activate(tab));
+      tab.addEventListener('keydown', (e) => {
+        let idx = null;
+        if (e.key === 'ArrowRight') idx = (i + 1) % tabs.length;
+        if (e.key === 'ArrowLeft') idx = (i - 1 + tabs.length) % tabs.length;
+        if (idx !== null) {
+          e.preventDefault();
+          activate(tabs[idx]);
+        }
+      });
+    });
+  })();
+</script>
+
 </body>
 </html>
+
+portfolio.html
+Displaying portfolio.html.
